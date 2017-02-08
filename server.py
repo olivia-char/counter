@@ -14,4 +14,10 @@ def index():
 def clicked():
 	session['count'] += 1
 	return redirect('/')
+
+@app.route('/reset')
+def clicked2():
+	session ['count'] = 0
+	return redirect('/')
+
 app.run(debug=True)
